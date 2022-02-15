@@ -1,22 +1,39 @@
 /*====================
 =======Structure======
 ======================*/
+/* (estructura de la web) */
 
+/* ETIQUETA QUE MUESTRA TODO LO QUE APARECE EN LA PANTALLA */
 body{
-    background-color: hsl(226 63% 45%);
+    /* color de fondo / utilizar hsl para paleta de colores (mayor degradado con menor consumo) */
+    /* utilizar en body, header, table, button y lo que queramos (utilizar en cada apartado deseado/div) */
+    background-color: hsl(298, 63%, 45%);
     display:flex; 
-    flex-direction:column;    
+    flex-direction:column; 
+    /* margen fuera de la caja (div), entre ambos div. Margen exterior */
+    /* AUTO = centra la caja en la página, dejando los mismos márgenes de ancho o laterales. */
     margin: 1em auto;
+    /* altura mínima */
     min-height: 100vh;
     width: 90%;
 }
 
+/* valores proporcionales a la caja */
 header{
+    /* borde de la caja (div) */
+    border: 0.1em solid rgb(185, 48, 48);
+    /* margen exterior div */
+    margin: 1em 0;
+    /* margen interior div */
+    padding: 1em;
+    /* elementos en fila */
     display: flex;
     height: 10vh;
+    /* (si en lugar de start utilizamos space-between , éste centraría los elementos...) y si queremos también espacio a los lados "space-around" */
     justify-content: start;
 }
 
+/* los valores son proporcionales a la caja, no a la pantalla completa */
 main{
     margin: 1em 0;
     width: 100%;
@@ -30,11 +47,14 @@ footer{
 /*====================
 ======Typography======
 ======================*/
+/* (texto de la web) */
 
+/* , para referirse a diferentes elementos */
 h1, h2, h3, h4, h5, h6, a, p{
     color: hsl(0, 0%, 100%);
 }
 
+/* fuente tipográfica */
 h1, h2, h3, h4 {
     font-family: "Ubuntu";
 }
@@ -49,7 +69,9 @@ a, td, p, button{
 
 h1 {
     font-size: 2.5em;
+    /* grosor texto */
     font-weight: 600;
+    /* none, elimina toda decoración por defecto como un enlace el subrayado */
     text-decoration: none;
 }
 
@@ -82,8 +104,10 @@ a:focus, a:hover {
 /*====================
 ========Image=========
 ======================*/
+/* (imágenes de la web) */
 
 img {
+    /* anchura máxima de la caja */
     max-width: 100%;
 }
 
@@ -92,9 +116,11 @@ img {
 ======================*/
 
 .logo{
+    /* max-content , adaptar el contenido al 100% de la caja */
     width: max-content;
 }
 
+/* barra espaciadora, para especificar el valor de un elemento de la carpeta */
 .logo svg{
     height: 3em;
     width: 3em;
@@ -153,8 +179,11 @@ img {
 }
 
 .crud__table-grid{
+    /* las cajas se ponen en fila (una al lado de la otra) */
     display: grid;
+    /* cajas por fila */
     grid-template-columns: 25% 25% 25% 25%;
+    /* distancia de margen entre las cajas */
     grid-gap: 0.5em;
 }
 
@@ -162,6 +191,7 @@ img {
     width: 100%;
 }
 
+/* las cajas se ponen en fila, pero a su vez se adapta a la caja */
 .crud__table-flex{
     display: flex;
     flex-wrap: wrap;
@@ -169,6 +199,7 @@ img {
 }
 
 .crud__table-flex-element{
+    /* número de elementos por fila (sin dejar la propiedad de adaptase a la caja y saltando de línea si es necesario) */
     flex-basis: 25%;
 }
 
@@ -261,6 +292,7 @@ img {
     text-align: center;
 }
 
+/* para especificar en tableta u otros dispositivos de más o menos pix. deseados, se adapte a estas indicaciones... */
 @media (min-width: 1920px) {
 
     h1 {
