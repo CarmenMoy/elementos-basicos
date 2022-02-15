@@ -34,6 +34,7 @@ header{
 }
 
 /* los valores son proporcionales a la caja, no a la pantalla completa */
+
 main{
     margin: 1em 0;
     width: 100%;
